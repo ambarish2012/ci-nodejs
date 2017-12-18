@@ -26,6 +26,7 @@ build:
     # npm mirrors can sometimes be flacky, better to use shippable_retry
     # http://docs.shippable.com/ci/advancedOptions/retry/
     - nvm --version
+    - npm --version
     
 
 # Integrations are used to connect external resources to CI
