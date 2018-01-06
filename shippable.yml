@@ -26,6 +26,7 @@ build:
     # npm mirrors can sometimes be flacky, better to use shippable_retry
     # http://docs.shippable.com/ci/advancedOptions/retry/
     - terraform version
+    - ansible --version
     - nvm --version
     - npm --version
     
