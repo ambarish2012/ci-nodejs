@@ -16,5 +16,6 @@ build:
   ci:
     # npm mirrors can sometimes be flacky, better to use shippable_retry
     # http://docs.shippable.com/ci/advancedOptions/retry/
+    - apt-get update && apt-get install libmysqlclient-dev -y
     - apt-get update && apt-get -y install freetds-dev freetds-bin
 
