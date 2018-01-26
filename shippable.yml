@@ -18,6 +18,7 @@ build:
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR/..
     - ls -la
     - ls -la ../
+    - which npm
     - su -c "shippable_retry npm install" newuser
     
 
