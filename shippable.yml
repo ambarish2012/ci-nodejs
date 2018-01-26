@@ -19,7 +19,7 @@ build:
     - sudo rm -rf /usr/lib/node_modules
     - adduser --disabled-password --gecos "" newuser
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR/..
-    - su -c "curl -L https://www.npmjs.com/install.sh | sh" newuser
+    - su -c ./installnodenpm.sh newuser
     - su -c "which npm" newuser
     - su -c "shippable_retry npm install" newuser
     
