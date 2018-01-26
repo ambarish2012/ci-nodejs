@@ -16,7 +16,6 @@ build:
   ci:
     - sudo npm uninstall npm -g
     - sudo rm -rf /usr/local/{lib/node{,/.npm,_modules},bin,share/man}/npm*
-    - sudo ls -laF /usr/local/{lib/node{,/.npm},bin,share/man} | grep npm
     - sudo rm -rf /usr/lib/node_modules
     - adduser --disabled-password --gecos "" newuser
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR/..
