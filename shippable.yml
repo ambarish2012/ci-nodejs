@@ -16,7 +16,7 @@ build:
   ci:
     - adduser --disabled-password --gecos "" newuser
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR
-    - ls -a
+    - ls -la
     - su -c "shippable_retry npm install" newuser
     
 
