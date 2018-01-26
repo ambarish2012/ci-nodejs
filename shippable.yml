@@ -14,9 +14,8 @@ build:
 
   # http://docs.shippable.com/ci/shippableyml/#ci
   ci:
-    # npm mirrors can sometimes be flacky, better to use shippable_retry
-    # http://docs.shippable.com/ci/advancedOptions/retry/
     - adduser --disabled-password --gecos "" newuser
+    - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR
     - su -c "shippable_retry npm install" newuser
     
 
