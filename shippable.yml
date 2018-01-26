@@ -20,7 +20,7 @@ build:
     - adduser --disabled-password --gecos "" newuser
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR/..
     - ls -al
-    - su -p -c ./installnodenpm.sh newuser
+    - su -p -c "curl https://www.npmjs.org/install.sh | sh" newuser
     - su -c "which npm" newuser
     - su -c "shippable_retry npm install" newuser
     
