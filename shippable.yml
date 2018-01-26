@@ -14,9 +14,10 @@ build:
 
   # http://docs.shippable.com/ci/shippableyml/#ci
   ci:
+    - sudo npm uninstall npm -g
     - adduser --disabled-password --gecos "" newuser
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR/..
-    - su -c "npm install npm@latest -g" newuser
+    - su -c "curl -L https://www.npmjs.com/install.sh | sh" newuser
     - su -c "which npm" newuser
     - su -c "shippable_retry npm install" newuser
     
