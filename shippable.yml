@@ -23,7 +23,7 @@ build:
     - adduser --disabled-password --gecos "" newuser
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR/..
     - ls -al
-    - sudo apt-get install -y nodejs=4.8.7
+    - sudo apt-get install -y nodejs
     - su -p -c ./install.sh newuser
     - su -c "which npm" newuser
     - su -c "shippable_retry npm install" newuser
