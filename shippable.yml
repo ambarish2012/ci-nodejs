@@ -19,7 +19,8 @@ build:
     - sudo rm -rf /usr/lib/node_modules
     - adduser --disabled-password --gecos "" newuser
     - chown -R newuser:newuser $SHIPPABLE_BUILD_DIR/..
-    - su -c ./installnodenpm.sh newuser
+    - ls -al
+    - sudo -H -u newuser /bin/sh ./installnodenpm.sh
     - su -c "which npm" newuser
     - su -c "shippable_retry npm install" newuser
     
