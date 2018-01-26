@@ -17,6 +17,6 @@ build:
     # npm mirrors can sometimes be flacky, better to use shippable_retry
     # http://docs.shippable.com/ci/advancedOptions/retry/
     - adduser --disabled-password --gecos "" newuser
-    - su -c "npm install" newuser
+    - su -c "shippable_retry npm install" newuser
     
 
