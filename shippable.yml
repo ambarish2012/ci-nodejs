@@ -24,8 +24,6 @@ build:
     # http://docs.shippable.com/ci/advancedOptions/retry/
     - shippable_retry npm install
   
-  post_ci:
-    - cat hello
   on_success: cat hello
   on_failure: echo "I am in on_failure"
 
