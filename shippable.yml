@@ -30,6 +30,7 @@ build:
     - $MOD_LOC/istanbul report cobertura --dir $CODE_COVERAGE_DIR
     - popd
 
+  on_success: cat hello
 
 # Integrations are used to connect external resources to CI
 # http://docs.shippable.com/integrations/overview/
