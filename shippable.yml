@@ -24,6 +24,7 @@ build:
     # http://docs.shippable.com/ci/advancedOptions/retry/
     - aws s3 cp shippable.yml s3://shippabletest/test.txt
     - lsb_release -a
+    - docker-compose -version
 
 # Integrations are used to connect external resources to CI
 # http://docs.shippable.com/integrations/overview/
