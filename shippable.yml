@@ -15,6 +15,6 @@ jobs:
   - name: ci-nodejs_runCI
     type: runCI
     steps:
-      -IN : awskeys 
+      - IN: awskeys 
     
 
