@@ -2,8 +2,10 @@ language: none
 
 build:
   ci:
-    - echo $AWS_ACCESS_KEY_ID 
-    - echo $AWS_SECRET_ACCESS_KEY
+    - echo $AWSKEYS_INTEGRATION_ACCESSKEY
+    - echo $AWSKEYS_INTEGRATION_SECRETKEY
+    - aws configure aws_access_key_id $AWSKEYS_INTEGRATION_ACCESSKEY
+    - aws configure aws_secret_access_key $AWSKEYS_INTEGRATION_SECRETKEY
     - aws s3 cp shippable.yml s3://shippabletest/test.txt
 
 resources:
