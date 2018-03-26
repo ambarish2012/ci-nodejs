@@ -6,6 +6,5 @@ build:
     - lsb_release -a
 
 integrations:
-  hub:
-    - integrationName: awskeys   ##replace with your integration name
-      type: amazonKeys
+  - integrationName: awskeys   ##replace with your integration name
+    type: amazonKeys
