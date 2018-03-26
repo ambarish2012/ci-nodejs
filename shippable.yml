@@ -14,7 +14,7 @@ resources:
     integration:    awskeys
     
 jobs:
-  - name: ci-nodejs_runCI
+  - name: awskeys-cli-sample_runCI
     type: runCI
     steps:
       - IN: awskeys 
