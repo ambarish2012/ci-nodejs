@@ -4,10 +4,17 @@ build:
   ci:
     - echo $AWS_ACCESS_KEY_ID 
     - echo $AWS_SECRET_ACCESS_KEY
-    - echo $AWS_SESSION_TOKEN
     - aws s3 cp shippable.yml s3://shippabletest/test.txt
-    - lsb_release -a
 
-integrations:
-  - integrationName: awskeys   ##replace with your integration name
-    type: amazonKeys
+resources:
+  - name:           awskeys
+    type:           integration
+    integration:    awskeys
+    
+jobs:
+  - name: ci-nodejs_runCI
+    type: runCI
+    steps:
+      -IN : awskeys 
+    
+
